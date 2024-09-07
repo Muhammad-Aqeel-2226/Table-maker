@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+
+.body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100dvh;
+    width: 100dvw;
+    background-color: #00ffff;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 80dvh;
+    width: 80dvw;
+    background-color: #55b4fc;
+    border-radius: 30px;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/*Left handSide*/
+
+.container span{
+    height: 400px;
+    width: 350px;
+    background-color: #9d649b;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.container span #input {
+    width: 100%;
+    height: 40px;
+    background-color: #4d4c4c;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.container span .submit {
+    width: 100%;
+    height: 40px;
+    background-color: #4d4c4c;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.container span .submit:active{
+    background-color: #660063;
+}
+
+/*Right handSide*/
+
+.bg-output{
+    height: 400px;
+    width: 600px;
+    background-color: #8a8bd4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.output{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
