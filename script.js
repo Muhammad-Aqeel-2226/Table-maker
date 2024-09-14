@@ -5,27 +5,38 @@ function validateInput(event) {
 }
 
 function userInput() {
-    let num1, op;
-    num1 = document.getElementById("input").value;  // Get the input value
-    op = document.getElementById("output");  // Get the output element
+    let num, output;
+    num = document.getElementById("input").value;  
+    output = document.getElementById("output");
 
     // Clear the previous output
-    op.innerHTML = "";
+    output.innerHTML = "";
 
     // Validate the input
-    if (num1 === "" || isNaN(num1) || num1 <= 0) {
-        op.innerHTML = "Error: Please Enter a positive number greater than 0.";
-        return;  // Stop further execution if there's an error
+    if (num === "") {
+        output.innerHTML = "ERROR: Please Enter a number.";
+        output.style.color = 'red';
+        return;
+    } else if (isNaN(num)) {
+        output.innerHTML = "ERROR: Please Enter a Correct number.";
+        output.style.color = 'red';
+        return;
+    }else if(num <= 0){
+        output.innerHTML = "ERROR: Please Enter a positive number greater than 0.";
+        output.style.color = 'red';
+        return;
     }
 
+    output.innerHTML += `<h1>Here is the table of ${num}.</h1><br/>`;
     // Generate the multiplication table
     for (let i = 1; i <= 50; i++) {
-        op.innerHTML += num1;
-        op.innerHTML += " x ";
-        op.innerHTML += i;
-        op.innerHTML += " = ";
-        op.innerHTML += num1 * i;
-        op.innerHTML += " <br/>";
+        output.style.color = 'aliceblue';
+        output.innerHTML += num;
+        output.innerHTML += " x ";
+        output.innerHTML += i;
+        output.innerHTML += " = ";
+        output.innerHTML += num * i;
+        output.innerHTML += " <br/>";
     }
 }
 
